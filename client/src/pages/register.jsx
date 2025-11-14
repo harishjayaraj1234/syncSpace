@@ -73,11 +73,10 @@ function Register() {
       else setMessage(error.message);
     }
 
-     (role == 'freelancer') ? navigate("/freelancer-dashboard") : navigate("/user-dashboard");
   };
 
   return (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50">
+  <div className="flex items-center justify-center min-h-screen via-white to-blue-50">
     <form
       onSubmit={handleSubmit}
       className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-100 transform transition duration-300 hover:shadow-2xl"
@@ -128,11 +127,11 @@ function Register() {
           onChange={handleChange}
           required
         >
-          <option disabled selected>
+          <option value="role" disabled>
             Select Role
           </option>
-          <option value="user">User</option>
-          <option value="freelancer">Freelancer</option>
+          <option value="member">member</option>
+          <option value="admin">admin</option>
         </select>
       </div>
 

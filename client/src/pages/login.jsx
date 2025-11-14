@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import SignInWithGoogle from "../components/signinWithGoogle";
 
 
 
@@ -58,13 +59,13 @@ function Login({ setUserRole }) {
   };
 
  return (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50">
+  <div className="flex items-center justify-center min-h-screen via-white to-blue-50">
     <form
       onSubmit={handleSubmit}
       className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-100 transform transition duration-300 hover:shadow-2xl"
     >
       <h2 className="text-3xl font-extrabold text-center text-blue-700 mb-6">
-        Welcome Back 👋
+        Welcome Back ⬅️
       </h2>
 
       <div className="space-y-5">
@@ -103,6 +104,8 @@ function Login({ setUserRole }) {
       >
         Login
       </button>
+
+      <SignInWithGoogle/>
 
       <div className="flex justify-between items-center mt-4 text-sm text-blue-600">
         <Link
