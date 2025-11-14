@@ -3,6 +3,7 @@ import cors from 'cors'
 import env from 'dotenv'
 import connectDB from './config/mongodb.js'
 import authRouter from './routes/authRoutes.js'
+import projectRouter from './routes/projectRoute.js'
 
 const app = express()
 env.config()
@@ -18,6 +19,8 @@ app.use(express.json())
 
 // API Endpoints
 app.use('/api/auth',authRouter)
+app.use('/api/projects', projectRouter);
+
 
 app.get('/',(req,res)=>res.send("Api Working..."))
 
